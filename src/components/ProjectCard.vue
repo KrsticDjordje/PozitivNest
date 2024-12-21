@@ -2,7 +2,8 @@
 defineProps<{
   title: string
   description: string
-  technologies: string[]
+  features: string[]
+  tags: string[]
   imageUrl: string
   projectUrl: string
 }>()
@@ -15,11 +16,16 @@ defineProps<{
         <img :src="imageUrl" :alt="title" class="project-image">
       </div>
       <div class="card-body">
+        <div class="tags">
+          <span v-for="tag in tags" :key="tag" class="tag">
+            {{ tag }}
+          </span>
+        </div>
         <h3>{{ title }}</h3>
         <p class="description">{{ description }}</p>
-        <div class="technologies">
-          <span v-for="tech in technologies" :key="tech" class="tech-tag">
-            {{ tech }}
+        <div class="features">
+          <span v-for="feature in features" :key="feature" class="feature-tag">
+            {{ feature }}
           </span>
         </div>
       </div>
@@ -89,13 +95,29 @@ h3 {
   line-height: 1.5;
 }
 
-.technologies {
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  background: rgba(78, 205, 196, 0.1);
+  color: #4ecdc4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.features {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.tech-tag {
+.feature-tag {
   background: rgba(255, 255, 255, 0.1);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
@@ -104,7 +126,7 @@ h3 {
   transition: all 0.3s ease;
 }
 
-.project-card:hover .tech-tag {
+.project-card:hover .feature-tag {
   background: rgba(255, 255, 255, 0.15);
   transform: translateZ(5px);
 }

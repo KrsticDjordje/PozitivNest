@@ -5,23 +5,34 @@ const projects = [
   {
     title: 'Vexiform',
     description: 'Free EXIF metadata viewer for your images. View detailed information about your photos including camera settings, location data, and more.',
-    technologies: ['Free', 'No ads', 'No email required'],
+    tags: ['Free', 'No ads', 'No email required'],
+    features: ['EXIF metadata viewer', 'Metadata removal'],
     imageUrl: '/images/vexiform.png',
     projectUrl: 'https://vexiform.pages.dev'
   },
   {
     title: 'QRtist',
     description: 'Create and customize QR codes for free. Generate QR codes for links, text, or contact information with custom colors and styles.',
-    technologies: ['Free', 'No ads', 'No email required'],
+    tags: ['Free', 'No ads', 'No email required'],
+    features: ['Customizable', 'Multiple formats', 'Batch generation'],
     imageUrl: '/images/qrtist.png',
     projectUrl: 'https://qrtist.pages.dev'
   },
   {
     title: 'OptimizeHub',
     description: 'Free tool for compressing and converting images, PDFs, and videos. Transform files between different formats without quality loss.',
-    technologies: ['Free', 'No ads', 'No email required'],
+    tags: ['Free', 'No ads', 'No email required'],
+    features: ['Lossless compression', 'Multiple formats', 'File conversion'],
     imageUrl: '/images/optimizehub.png',
     projectUrl: 'https://optimizehub.pages.dev'
+  },
+  {
+    title: 'Iconium',
+    description: 'Free icon library with pre-defined categories. Download and customize icons for your projects. Simple interface for finding and modifying icons to match your needs.',
+    tags: ['Free', 'No ads', 'No email required'],
+    features: ['Customizable icons', 'Multiple formats', 'Category browsing'],
+    imageUrl: '/images/iconium.png',
+    projectUrl: 'https://iconium.pages.dev'
   }
 ]
 </script>
